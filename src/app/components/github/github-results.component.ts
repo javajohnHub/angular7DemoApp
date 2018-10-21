@@ -39,7 +39,7 @@ import {
 
   <mat-grid-list cols="3" cols-md="2" cols-sm="1" gutter="12px" row-height="3:3">
 <mat-grid-tile *ngFor="let repo of repos">
-<div class="row">
+<mat-card>
           <div class="col-md-9">
             <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
             <p>{{repo.description}}</p>
@@ -48,7 +48,7 @@ import {
             <span class="label label-default">{{repo.watchers}} Watchers</span>
             <span class="label label-primary">{{repo.forks}} Forks</span>
           </div>
-          </div>
+          </mat-card>
 </mat-grid-tile>
 </mat-grid-list>
   `

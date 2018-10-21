@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
           [user]="user"
           [repos]="repos">
         </app-github-result>
-
+</div>
   `,
 })
 export class GithubSearchComponent {

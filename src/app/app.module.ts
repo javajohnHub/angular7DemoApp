@@ -32,6 +32,7 @@ import {MatInputModule} from '@angular/material';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatMenuModule,
     MatIconModule,
     routing,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [BookService, FlickrService, GiphyService, GithubService, TimeService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}],
