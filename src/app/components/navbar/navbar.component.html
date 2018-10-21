@@ -1,10 +1,12 @@
 <button mat-icon-button [matMenuTriggerFor]="appMenu" style="float:right;">
   <mat-icon>more_horiz</mat-icon>
+  <app-current-time></app-current-time>
 </button>
 <mat-menu #appMenu="matMenu">
   <button routerLink="/books" mat-menu-item>Books</button>
   <button routerLink="/flickr" mat-menu-item>Flickr</button>
   <button routerLink="/giphy" mat-menu-item>Giphy</button>
   <button routerLink="/github" mat-menu-item>Github</button>
+
 </mat-menu>
 

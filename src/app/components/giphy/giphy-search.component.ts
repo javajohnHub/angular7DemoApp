@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {GiphyResult} from '../../models/giphy-result';
 
 @Component({
-  selector: 'app-giphy-search',
+  selector: "app-giphy-search",
   template: `
 
   <app-giphy-search-box
@@ -17,7 +17,7 @@ import {GiphyResult} from '../../models/giphy-result';
         </app-giphy-result>
 </mat-grid-tile>
 </mat-grid-list>
-  `,
+  `
 })
 export class GiphySearchComponent {
   results: GiphyResult[];

@@ -3,21 +3,18 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-github-search',
   template: `
+  <app-github-search-box
+  (loading)="loading = $event"
+  (user)="updateUser($event)"
+  (repos)="updateRepos($event)"
+></app-github-search-box>
+<div *ngIf="user && repos" style="overflow:auto;">
 
-        <div>
-          <app-github-search-box
-            (loading)="loading = $event"
-            (user)="updateUser($event)"
-            (repos)="updateRepos($event)"
-          ></app-github-search-box>
-        </div>
-
-      <div *ngIf="repos && user">
-        <app-github-result
+<app-github-result
           [user]="user"
           [repos]="repos">
         </app-github-result>
-      </div>
+
   `,
 })
 export class GithubSearchComponent {

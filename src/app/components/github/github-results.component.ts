@@ -36,14 +36,10 @@ import {
       </div>
     </div>
   </div>
-  <div *ngIf="repos">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">User Repos</h3>
-    </div>
-    <div class="panel-body">
-      <div *ngFor="let repo of repos">
-        <div class="row">
+
+  <mat-grid-list cols="3" cols-md="2" cols-sm="1" gutter="12px" row-height="3:3">
+<mat-grid-tile *ngFor="let repo of repos">
+<div class="row">
           <div class="col-md-9">
             <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
             <p>{{repo.description}}</p>
@@ -53,12 +49,8 @@ import {
             <span class="label label-primary">{{repo.forks}} Forks</span>
           </div>
           </div>
-        <hr/>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+</mat-grid-tile>
+</mat-grid-list>
   `
 })
 export class GithubResultComponent {
