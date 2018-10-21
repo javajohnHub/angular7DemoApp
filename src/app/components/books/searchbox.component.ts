@@ -17,7 +17,7 @@ import { debounceTime} from 'rxjs/operators';
   <input matInput type="text" [formControl]="search" placeholder="Search Google Books" autofocus>
   </mat-form-field>
     <div *ngIf="items">
-    Total: {{items}}
+    Total: 40/{{items}}
     </div>
 
   `
