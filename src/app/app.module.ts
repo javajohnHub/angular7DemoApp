@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -27,6 +27,11 @@ import { GithubSearchBoxComponent } from './components/github/github-searchbox.c
 import { GithubSearchComponent } from './components/github/github-search.component';
 import { GithubResultComponent } from './components/github/github-results.component';
 
+
+import {MatInputModule} from '@angular/material';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,14 +48,20 @@ import { GithubResultComponent } from './components/github/github-results.compon
     GithubSearchBoxComponent,
     GithubSearchComponent,
     GithubResultComponent,
-    CurrentTimeComponent
+    CurrentTimeComponent,
+
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    routing
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatMenuModule,
+    MatIconModule,
+    routing,
+    MatGridListModule
   ],
   providers: [BookService, FlickrService, GiphyService, GithubService, TimeService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}],

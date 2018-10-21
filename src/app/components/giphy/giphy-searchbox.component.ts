@@ -4,8 +4,7 @@ import {
   ElementRef,
   EventEmitter, Output,
 } from '@angular/core';
-import { map, debounceTime } from 'rxjs/operators';
-import { fromEvent } from 'rxjs';
+import {debounceTime } from 'rxjs/operators';
 import { FormControl } from '@angular/forms';
 import {GiphyResult} from '../../models/giphy-result';
 import {GiphyService} from '../../services/giphy.service';
@@ -13,7 +12,10 @@ import {GiphyService} from '../../services/giphy.service';
 @Component({
   selector: 'app-giphy-search-box',
   template: `
-    <input type="text" [formControl]="search" placeholder="Search Giphy" autofocus>
+  <mat-form-field class="example-full-width">
+  <input matInput type="text" [formControl]="search" placeholder="Search Giphy" autofocus>
+  </mat-form-field>
+
   `
 })
 

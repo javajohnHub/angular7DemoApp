@@ -13,7 +13,9 @@ import { debounceTime} from 'rxjs/operators';
 @Component({
   selector: 'app-search-box',
   template: `
-    <input type="text" [formControl]="search" placeholder="Search Google Books" autofocus>
+  <mat-form-field class="example-full-width">
+  <input matInput type="text" [formControl]="search" placeholder="Search Google Books" autofocus>
+  </mat-form-field>
     <div *ngIf="items">
     Total: {{items}}
     </div>

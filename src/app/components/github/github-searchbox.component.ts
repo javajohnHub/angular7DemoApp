@@ -12,7 +12,10 @@ import { GithubService } from '../../services/github.service';
 @Component({
   selector: 'app-github-search-box',
   template: `
-    <input type="text" [formControl]="search" placeholder="Search Github" autofocus>
+  <mat-form-field class="example-full-width">
+  <input matInput type="text" [formControl]="search" placeholder="Search Github" autofocus>
+  </mat-form-field>
+
   `
 })
 

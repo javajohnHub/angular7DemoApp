@@ -12,7 +12,10 @@ import { debounceTime } from 'rxjs/operators';
 @Component({
   selector: 'app-flickr-search-box',
   template: `
-    <input type="text" [formControl]="search" placeholder="Search Flickr" autofocus>
+  <mat-form-field class="example-full-width">
+  <input matInput type="text" [formControl]="search" placeholder="Search Flickr" autofocus>
+  </mat-form-field>
+
   `
 })
 

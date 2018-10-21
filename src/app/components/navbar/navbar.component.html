@@ -1,4 +1,10 @@
-<li><a routerLink="/books">Books</a></li>
-        <li><a routerLink="/flickr">Flickr</a></li>
-        <li><a routerLink="/giphy">Giphy</a></li>
-        <li><a routerLink="/github">Github</a></li>
+<button mat-icon-button [matMenuTriggerFor]="appMenu" style="float:right;">
+  <mat-icon>more_horiz</mat-icon>
+</button>
+<mat-menu #appMenu="matMenu">
+  <button routerLink="/books" mat-menu-item>Books</button>
+  <button routerLink="/flickr" mat-menu-item>Flickr</button>
+  <button routerLink="/giphy" mat-menu-item>Giphy</button>
+  <button routerLink="/github" mat-menu-item>Github</button>
+</mat-menu>
+

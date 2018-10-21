@@ -1,19 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {Router} from '@angular/router';
+import { MatMenuTrigger } from '@angular/material';
+
 
 @Component({
   selector: 'app-navbar',
   templateUrl: 'navbar.component.html'
 })
 export class NavbarComponent {
-  public status: { isopen: boolean } = { isopen: false };
+  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
+
   constructor(private router: Router) {
 
   }
 
-  public toggleDropdown($event: MouseEvent): void {
-    $event.preventDefault();
-    $event.stopPropagation();
-    this.status.isopen = !this.status.isopen;
-  }
 }

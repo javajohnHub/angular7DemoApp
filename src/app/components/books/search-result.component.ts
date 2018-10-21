@@ -6,22 +6,16 @@ import {BookSearchResult} from '../../models/book-search-result';
 @Component({
   selector: 'app-search-result',
   template: `
-   <div>
-   <h3><a href="{{canonicalVolumeLink}}" target="_blank">{{title}}</a></h3><small *ngIf="subtitle">{{subtitle}}</small>
-     <div class="row">
-       <div class="col-md-2"><img class="img-responsive img-thumbnail" *ngIf="thumbnail" [src]="thumbnail"></div>
-       <div class="caption col-md-10">
-         <p *ngIf="description">{{description}}</p>
-       </div>
-     </div>
-     <div>{{result.volumeInfo.averageRating}}</div>
-     - <span style="color:midnightblue"> {{ratingsCount || 0}}</span> votes
-      <span style="color: midnightblue">
-      <div *ngIf="epubIsAvailable">Available in epub</div>
-      <div *ngIf="pdfIsAvailable">Available in pdf</div>
-      </span>
-      <hr/>
+
+    <div layout="row" layout-margin layout-wrap layout-align="center center">
+    <div flex="25">
+    <div class="row">
+      <div><img *ngIf="thumbnail" [src]="thumbnail"></div>
+      <div style="overflow: auto;">
+        <!--<p *ngIf="description">{{description}}</p>-->
+      </div>
     </div>
+</div>
   `
 })
 export class SearchResultComponent {

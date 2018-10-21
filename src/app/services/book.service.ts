@@ -12,7 +12,7 @@ export class BookService {
   constructor(private http: HttpClient) {}
 
   searchBooks(queryTitle: string): Observable<Book[]> {
-    return this.http.get<Book[]>(`${this.API_PATH}?q=${queryTitle}`)
+    return this.http.get<Book[]>(`${this.API_PATH}?q=${queryTitle}&maxResults=40`)
   }
 
   retrieveBook(volumeId: string): Observable<Book> {
